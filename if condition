@@ -1,0 +1,52 @@
+Height = float(input("Enter height in meters:"))
+print()
+
+Weight = float(input("Enter the weight in kilograms:"))
+print()
+
+BMI = float(Weight / Height**2)
+print(BMI)
+print()
+
+if BMI >=30:
+    print("Obesity")
+elif 25 <= BMI <=29:
+    print("Overweight")
+elif 18.5 <= BMI <= 25:
+    print("Normal")
+else:
+    print("Underweight")    
+print()
+
+
+
+Countries ={"Australia" : ["Sydney","Melbourne","Brisbane","Perth"],
+            "UAE" : ["Dubai","Abu Dhabi","Sharjah","Ajman"],
+            "India" : ["Mumbai","Bangalore","Chennai","Delhi"]}
+city = input("Enter a city name:").title()
+
+for country, cities in Countries.items():
+    if city  in cities:
+        print(f"{city} is in {country}")
+
+First_city = input("enter the first city:").title()
+Second_city = input("enter the second city:").title()
+
+country1 = Countries.get(First_city)
+country2 = Countries.get(Second_city)
+
+for country, cities in Countries.items():
+    if First_city in cities:
+        country1 = country
+        break
+for country,cities in Countries.items():
+    if Second_city in cities:
+        country2 = country
+        break
+
+if country1 and country1 == country2:
+    print("both cities are in",country1)
+elif country1 and country2:
+    print("they don't belong to the same country")
+else:
+    print("one or both cities not found in the list")
