@@ -1,8 +1,8 @@
 pi = 22/7
 print(type(pi))
 
-
-
+for = 4
+#syntax error#
 
 principal_amount = int(input("enter the principal amount ="))
 rate_of_interest = int(input("enter the rate of interest in % ="))
